@@ -57,4 +57,6 @@ class ArtistViewController: UIViewController {
             print(image.title)
             return cell
         }
+        
+        
     }
