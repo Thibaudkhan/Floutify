@@ -135,6 +135,7 @@
 		9AB614A425A73FF200F29B7F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BB60EF2125A76CC30039D8A4 /* ImageCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +145,7 @@
 			children = (
 				4E2C3E2C25A70BF4008C9892 /* LaunchScreen.storyboard */,
 				4E2C3E2725A70BF1008C9892 /* Main.storyboard */,
+				BB60EF1D25A766850039D8A4 /* testBoard.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,6 +153,7 @@
 		9AB614A625A7401700F29B7F /* Controler */ = {
 			isa = PBXGroup;
 			children = (
+				BB60EF1B25A75DFB0039D8A4 /* ArtistCell.swift */,
 				4E2C3E2525A70BF1008C9892 /* ViewController.swift */,
 				9AB614B825A7470900F29B7F /* LoginViewController.swift */,
 				9AB614D025A76AC700F29B7F /* ArtistViewController.swift */,
@@ -264,6 +267,7 @@
 				4E2C3E2E25A70BF4008C9892 /* LaunchScreen.storyboard in Resources */,
 				4E2C3E2B25A70BF4008C9892 /* Assets.xcassets in Resources */,
 				4E2C3E2925A70BF1008C9892 /* Main.storyboard in Resources */,
+				BB60EF1E25A766850039D8A4 /* testBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +294,7 @@
 			files = (
 				9AB614B925A7470900F29B7F /* LoginViewController.swift in Sources */,
 				4E2C3E2625A70BF1008C9892 /* ViewController.swift in Sources */,
+				BB60EF1C25A75DFB0039D8A4 /* ArtistCell.swift in Sources */,
 				4E2C3E2225A70BF1008C9892 /* AppDelegate.swift in Sources */,
 				4E2C3E2425A70BF1008C9892 /* SceneDelegate.swift in Sources */,
 				9AB614D125A76AC700F29B7F /* ArtistViewController.swift in Sources */,
@@ -470,6 +475,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Floutify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,6 +494,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Floutify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
