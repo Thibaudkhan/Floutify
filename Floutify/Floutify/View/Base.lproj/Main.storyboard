@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Oy-Bu-5kg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EFA-iG-j0l">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -11,7 +11,6 @@
         <!--Login View Controller-->
         <scene sceneID="b4B-SI-3Wq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hRT-dZ-4oF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="6sW-oY-aM1" customClass="LoginViewController" customModule="Floutify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qcg-VA-1AJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -58,6 +57,7 @@
                         <outlet property="txtPwd" destination="nf4-1a-8Gh" id="PZz-Kk-AzH"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hRT-dZ-4oF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2357" y="66"/>
         </scene>
@@ -105,18 +105,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="dRq-Cw-j53">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ArtistCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" rowHeight="150" id="dRq-Cw-j53" customClass="ArtistCell" customModule="Floutify" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dRq-Cw-j53" id="ubu-84-X0p">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bom-2r-SGF">
-                                                    <rect key="frame" x="220" y="-43" width="240" height="128"/>
+                                                    <rect key="frame" x="12" y="60" width="390" height="30"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="240" id="EKf-P3-wep"/>
+                                                        <constraint firstAttribute="height" constant="30" id="KWX-CY-Ari"/>
                                                     </constraints>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" systemColor="labelColor"/>
@@ -124,23 +124,26 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L5j-md-Xjx">
-                                                    <rect key="frame" x="7" y="-43" width="240" height="128"/>
+                                                    <rect key="frame" x="12" y="-34.5" width="390" height="219"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="240" id="Kzj-zx-boh"/>
+                                                        <constraint firstAttribute="width" secondItem="L5j-md-Xjx" secondAttribute="height" multiplier="16:9" id="9PN-Z8-R9S"/>
+                                                        <constraint firstAttribute="width" constant="132" id="B65-r9-Dum"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="L5j-md-Xjx" firstAttribute="top" secondItem="ubu-84-X0p" secondAttribute="top" constant="-43" id="9bd-a7-ArV"/>
-                                                <constraint firstAttribute="trailing" secondItem="bom-2r-SGF" secondAttribute="trailing" constant="-46" id="9qo-vJ-pcq"/>
-                                                <constraint firstAttribute="bottom" secondItem="bom-2r-SGF" secondAttribute="bottom" constant="-41.5" id="AI5-qT-omI"/>
-                                                <constraint firstAttribute="trailing" secondItem="bom-2r-SGF" secondAttribute="trailing" constant="-46" id="Buk-c9-oGU"/>
-                                                <constraint firstItem="L5j-md-Xjx" firstAttribute="leading" secondItem="ubu-84-X0p" secondAttribute="leading" constant="7" id="ZJs-gJ-VTB"/>
-                                                <constraint firstAttribute="bottom" secondItem="L5j-md-Xjx" secondAttribute="bottom" constant="-41.5" id="lUY-sT-DYG"/>
-                                                <constraint firstItem="L5j-md-Xjx" firstAttribute="leading" secondItem="ubu-84-X0p" secondAttribute="leading" constant="7" id="mQU-5V-Op4"/>
-                                                <constraint firstItem="bom-2r-SGF" firstAttribute="top" secondItem="ubu-84-X0p" secondAttribute="top" constant="-43" id="rmz-bO-7CI"/>
+                                                <constraint firstItem="L5j-md-Xjx" firstAttribute="leading" secondItem="ubu-84-X0p" secondAttribute="leading" constant="12" id="1mZ-xh-wnS"/>
+                                                <constraint firstItem="bom-2r-SGF" firstAttribute="leading" secondItem="ubu-84-X0p" secondAttribute="leading" constant="12" id="78i-Fg-hJH"/>
+                                                <constraint firstItem="L5j-md-Xjx" firstAttribute="centerY" secondItem="ubu-84-X0p" secondAttribute="centerY" id="TX3-cl-Ouz"/>
+                                                <constraint firstAttribute="trailing" secondItem="bom-2r-SGF" secondAttribute="trailing" constant="12" id="W9i-gG-ybf"/>
+                                                <constraint firstItem="L5j-md-Xjx" firstAttribute="centerX" secondItem="ubu-84-X0p" secondAttribute="centerX" id="bBF-C1-jnq"/>
+                                                <constraint firstItem="bom-2r-SGF" firstAttribute="centerY" secondItem="ubu-84-X0p" secondAttribute="centerY" id="x5N-sW-Zbd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageViewArtist" destination="L5j-md-Xjx" id="yl9-hS-Y4w"/>
+                                            <outlet property="textView" destination="bom-2r-SGF" id="F5a-3L-pSd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -159,6 +162,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EK8-Sd-mgH"/>
+                    <connections>
+                        <outlet property="tableView" destination="wDz-ma-cGS" id="noo-jL-lB6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ocl-Sa-xVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
