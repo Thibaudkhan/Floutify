@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YMF-w0-tM1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Oy-Bu-5kg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -11,6 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="b4B-SI-3Wq">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hRT-dZ-4oF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="6sW-oY-aM1" customClass="LoginViewController" customModule="Floutify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qcg-VA-1AJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -57,26 +58,24 @@
                         <outlet property="txtPwd" destination="nf4-1a-8Gh" id="PZz-Kk-AzH"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hRT-dZ-4oF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2357" y="66"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="QpW-MT-Sop">
+        <scene sceneID="cY7-la-FYv">
             <objects>
-                <navigationController id="YMF-w0-tM1" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="f2y-4z-lLK"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xcV-8E-aPU">
+                <navigationController id="EFA-iG-j0l" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H3k-Xj-ixc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="6sW-oY-aM1" kind="relationship" relationship="rootViewController" id="tfK-WM-t5e"/>
+                        <segue destination="6sW-oY-aM1" kind="relationship" relationship="rootViewController" id="NMk-lJ-Jb9"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HiL-2Y-cbe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OzE-dQ-rh6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1384" y="66"/>
+            <point key="canvasLocation" x="1417" y="89"/>
         </scene>
         <!--Artist View Controller-->
         <scene sceneID="6OK-7x-aAt">

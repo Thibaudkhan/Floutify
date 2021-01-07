@@ -25,6 +25,8 @@ class LoginViewController: UIViewController {
             
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "artist") as! ArtistViewController
+            nextViewController.modalPresentationStyle = .fullScreen
+            nextViewController.data = "toto"
             self.present(nextViewController, animated:true, completion:nil)
         }
 
