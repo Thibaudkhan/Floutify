@@ -15,7 +15,15 @@
 		4E2C3E2E25A70BF4008C9892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2C3E2C25A70BF4008C9892 /* LaunchScreen.storyboard */; };
 		4E2C3E3925A70BF5008C9892 /* FloutifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C3E3825A70BF5008C9892 /* FloutifyTests.swift */; };
 		4E2C3E4425A70BF5008C9892 /* FloutifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C3E4325A70BF5008C9892 /* FloutifyUITests.swift */; };
+<<<<<<< HEAD
 		9AB614B925A7470900F29B7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB614B825A7470900F29B7F /* LoginViewController.swift */; };
+=======
+		4E2C3E5525A70EDD008C9892 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C3E5425A70EDD008C9892 /* LoginViewController.swift */; };
+		BB60EF1A25A7514A0039D8A4 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB60EF1925A7514A0039D8A4 /* ArtistViewController.swift */; };
+		BB60EF1C25A75DFB0039D8A4 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB60EF1B25A75DFB0039D8A4 /* ArtistCell.swift */; };
+		BB60EF1E25A766850039D8A4 /* testBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB60EF1D25A766850039D8A4 /* testBoard.storyboard */; };
+		BB60EF2225A76CC30039D8A4 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB60EF2125A76CC30039D8A4 /* ImageCell.swift */; };
+>>>>>>> artistViewController
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +58,15 @@
 		4E2C3E3F25A70BF5008C9892 /* FloutifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloutifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2C3E4325A70BF5008C9892 /* FloutifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloutifyUITests.swift; sourceTree = "<group>"; };
 		4E2C3E4525A70BF5008C9892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		9AB614B825A7470900F29B7F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+=======
+		4E2C3E5425A70EDD008C9892 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BB60EF1925A7514A0039D8A4 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
+		BB60EF1B25A75DFB0039D8A4 /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtistCell.swift; path = Floutify/View/ArtistCell.swift; sourceTree = SOURCE_ROOT; };
+		BB60EF1D25A766850039D8A4 /* testBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = testBoard.storyboard; sourceTree = "<group>"; };
+		BB60EF2125A76CC30039D8A4 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageCell.swift; path = Floutify/View/ImageCell.swift; sourceTree = SOURCE_ROOT; };
+>>>>>>> artistViewController
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +149,7 @@
 		9AB614A425A73FF200F29B7F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BB60EF2125A76CC30039D8A4 /* ImageCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -142,6 +159,7 @@
 			children = (
 				4E2C3E2C25A70BF4008C9892 /* LaunchScreen.storyboard */,
 				4E2C3E2725A70BF1008C9892 /* Main.storyboard */,
+				BB60EF1D25A766850039D8A4 /* testBoard.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,8 +167,14 @@
 		9AB614A625A7401700F29B7F /* Controler */ = {
 			isa = PBXGroup;
 			children = (
+				BB60EF1B25A75DFB0039D8A4 /* ArtistCell.swift */,
 				4E2C3E2525A70BF1008C9892 /* ViewController.swift */,
+<<<<<<< HEAD
 				9AB614B825A7470900F29B7F /* LoginViewController.swift */,
+=======
+				4E2C3E5425A70EDD008C9892 /* LoginViewController.swift */,
+				BB60EF1925A7514A0039D8A4 /* ArtistViewController.swift */,
+>>>>>>> artistViewController
 			);
 			path = Controler;
 			sourceTree = "<group>";
@@ -261,6 +285,7 @@
 				4E2C3E2E25A70BF4008C9892 /* LaunchScreen.storyboard in Resources */,
 				4E2C3E2B25A70BF4008C9892 /* Assets.xcassets in Resources */,
 				4E2C3E2925A70BF1008C9892 /* Main.storyboard in Resources */,
+				BB60EF1E25A766850039D8A4 /* testBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,8 +312,11 @@
 			files = (
 				9AB614B925A7470900F29B7F /* LoginViewController.swift in Sources */,
 				4E2C3E2625A70BF1008C9892 /* ViewController.swift in Sources */,
+				BB60EF1C25A75DFB0039D8A4 /* ArtistCell.swift in Sources */,
 				4E2C3E2225A70BF1008C9892 /* AppDelegate.swift in Sources */,
 				4E2C3E2425A70BF1008C9892 /* SceneDelegate.swift in Sources */,
+				BB60EF2225A76CC30039D8A4 /* ImageCell.swift in Sources */,
+				BB60EF1A25A7514A0039D8A4 /* ArtistViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +494,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Floutify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,6 +513,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Floutify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
