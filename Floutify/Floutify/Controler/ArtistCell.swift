@@ -9,10 +9,6 @@ import UIKit
 
 class ArtistCell: UITableViewCell {
 
-
-    
-    
-    
     @IBOutlet weak var textView: UITextView!
     
     @IBOutlet weak var imageViewArtist: UIImageView!

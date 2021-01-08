@@ -6,6 +6,10 @@
 //
 
 import UIKit
+var album: [String] = ["Cobble","Terre"]
+var myIndexArtist = 0
+
+
 
 class ArtistViewController: UIViewController {
 
@@ -13,6 +17,7 @@ class ArtistViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
         var images: [ImageCell] = []
+        
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -27,19 +32,25 @@ class ArtistViewController: UIViewController {
         
         func createArray() -> [ImageCell]{
             
+            
             var allImages: [ImageCell] = []
-            let txt = "CobblestoneNew.png"
-                
-            let imageA = ImageCell(image: UIImage(named: txt)! ,title:"Cobble")
-            let imageB = ImageCell(image: UIImage(named: "GrassNew.png")! ,title:"Terre")
+
+            let imageA = ImageCell(image: UIImage(named: "CobblestoneNew.png")! ,title:album[0])
+            let imageB = ImageCell(image: UIImage(named: "GrassNew.png")! ,title:album[1])
             
             allImages.append(imageA)
             allImages.append(imageB)
             
             return allImages
         }
+    
+        func findAllArtist(){
+            let allArtists: [String] = []
 
-    }
+            
+        }
+
+        }
 
 
     extension ArtistViewController: UITableViewDataSource, UITableViewDelegate{
@@ -56,6 +67,12 @@ class ArtistViewController: UIViewController {
             cell.setImage(image: image)
             print(image.title)
             return cell
+        }
+        
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            myIndexArtist = indexPath.row
+            performSegue(withIdentifier: "segue", sender: self)
+
         }
         
         
