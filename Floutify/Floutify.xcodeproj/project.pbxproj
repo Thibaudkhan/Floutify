@@ -24,6 +24,8 @@
 		BBE5FF8225A8085000291169 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5FF8125A8085000291169 /* AlbumCell.swift */; };
 		BBEC724B25A80EA300D11848 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEC724A25A80EA300D11848 /* SongViewController.swift */; };
 		BBEC724F25A80F6100D11848 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEC724E25A80F6100D11848 /* SongCell.swift */; };
+		BBEC725125A81B9400D11848 /* SongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEC725025A81B9400D11848 /* SongDetailViewController.swift */; };
+		BBEC725325A8225C00D11848 /* SongDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEC725225A8225C00D11848 /* SongDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		BBE5FF8125A8085000291169 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		BBEC724A25A80EA300D11848 /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 		BBEC724E25A80F6100D11848 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		BBEC725025A81B9400D11848 /* SongDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
+		BBEC725225A8225C00D11848 /* SongDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 				9AAFD87425A7B73800ED73FA /* ImageCell.swift */,
 				BBE5FF7F25A7F87D00291169 /* TextCell.swift */,
 				BBEC724E25A80F6100D11848 /* SongCell.swift */,
+				BBEC725225A8225C00D11848 /* SongDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				9AB614D025A76AC700F29B7F /* ArtistViewController.swift */,
 				BBE5FF7B25A7F7FC00291169 /* AlbumViewController.swift */,
 				BBEC724A25A80EA300D11848 /* SongViewController.swift */,
+				BBEC725025A81B9400D11848 /* SongDetailViewController.swift */,
 			);
 			path = Controler;
 			sourceTree = "<group>";
@@ -310,12 +316,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBE5FF8025A7F87D00291169 /* TextCell.swift in Sources */,
+				BBEC725325A8225C00D11848 /* SongDetail.swift in Sources */,
 				9AB614B925A7470900F29B7F /* LoginViewController.swift in Sources */,
 				4E2C3E2625A70BF1008C9892 /* ViewController.swift in Sources */,
 				9AE5D75525A7B47B006FA9B8 /* ArtistCell.swift in Sources */,
 				BBEC724F25A80F6100D11848 /* SongCell.swift in Sources */,
 				BBE5FF7C25A7F7FC00291169 /* AlbumViewController.swift in Sources */,
 				4E2C3E2225A70BF1008C9892 /* AppDelegate.swift in Sources */,
+				BBEC725125A81B9400D11848 /* SongDetailViewController.swift in Sources */,
 				4E2C3E2425A70BF1008C9892 /* SceneDelegate.swift in Sources */,
 				BBE5FF8225A8085000291169 /* AlbumCell.swift in Sources */,
 				9AAFD87525A7B73800ED73FA /* ImageCell.swift in Sources */,

@@ -63,6 +63,11 @@ extension SongViewController: UITableViewDataSource, UITableViewDelegate{
      return cell
  }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndexAlbum = indexPath.row
+        performSegue(withIdentifier: "segueSong", sender: self)
+
+    }
 
  
 

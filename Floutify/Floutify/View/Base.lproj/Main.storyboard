@@ -246,35 +246,29 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" id="ZIs-3m-wzV" customClass="SongCell" customModule="Floutify" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="90" id="ZIs-3m-wzV" customClass="SongCell" customModule="Floutify" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZIs-3m-wzV" id="lLK-dR-Z2W">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="daP-Qv-95m">
-                                                    <rect key="frame" x="0.0" y="-13" width="0.0" height="68.5"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu," textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="daP-Qv-95m">
+                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="50"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="240" id="74E-tH-xnt"/>
+                                                        <constraint firstAttribute="width" constant="50" id="4s0-xb-LFx"/>
+                                                        <constraint firstAttribute="height" constant="50" id="GDX-f0-j0U"/>
                                                     </constraints>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="daP-Qv-95m" firstAttribute="top" secondItem="lLK-dR-Z2W" secondAttribute="top" constant="-13" id="3iv-Z1-5Og"/>
-                                                <constraint firstItem="daP-Qv-95m" firstAttribute="leading" secondItem="lLK-dR-Z2W" secondAttribute="leading" id="5iQ-Vz-H41"/>
-                                                <constraint firstAttribute="trailing" secondItem="daP-Qv-95m" secondAttribute="trailing" id="6SG-Bt-TTU"/>
-                                                <constraint firstItem="daP-Qv-95m" firstAttribute="leading" secondItem="lLK-dR-Z2W" secondAttribute="leading" id="EGK-G1-z8l"/>
-                                                <constraint firstAttribute="bottom" secondItem="daP-Qv-95m" secondAttribute="bottom" constant="-11.5" id="aTb-gC-qcs"/>
-                                                <constraint firstAttribute="trailing" secondItem="daP-Qv-95m" secondAttribute="trailing" id="uZ7-JZ-Nlq"/>
-                                                <constraint firstAttribute="trailing" secondItem="daP-Qv-95m" secondAttribute="trailing" id="uxx-GS-CLq"/>
-                                                <constraint firstItem="daP-Qv-95m" firstAttribute="leading" secondItem="lLK-dR-Z2W" secondAttribute="leading" id="wlZ-YW-OdG"/>
-                                                <constraint firstItem="daP-Qv-95m" firstAttribute="leading" secondItem="lLK-dR-Z2W" secondAttribute="leading" id="yQh-hI-U7j"/>
+                                                <constraint firstItem="daP-Qv-95m" firstAttribute="centerY" secondItem="lLK-dR-Z2W" secondAttribute="centerY" id="1hI-RA-cIg"/>
+                                                <constraint firstItem="daP-Qv-95m" firstAttribute="top" secondItem="lLK-dR-Z2W" secondAttribute="top" id="myX-Zr-FB1"/>
+                                                <constraint firstAttribute="bottom" secondItem="daP-Qv-95m" secondAttribute="bottom" constant="40" id="s3b-O2-WQ2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -299,28 +293,29 @@
                     <navigationItem key="navigationItem" id="geJ-RX-0oX"/>
                     <connections>
                         <outlet property="tableView" destination="QDA-ya-l8v" id="wQu-EK-1Ee"/>
+                        <segue destination="smK-fw-HWv" kind="show" identifier="segueSong" id="obB-dU-65U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efg-P1-Jag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4552.1739130434789" y="65.625"/>
         </scene>
-        <!--View Controller-->
+        <!--Song Detail View Controller-->
         <scene sceneID="bkx-FQ-xXZ">
             <objects>
-                <viewController id="smK-fw-HWv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4Sn-42-p4A">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController id="smK-fw-HWv" customClass="SongDetailViewController" customModule="Floutify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Sn-42-p4A" customClass="SongDetail" customModule="Floutify" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" placeholder="fgbvdfbv" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="My2-81-JIV">
-                                <rect key="frame" x="30" y="81" width="354" height="34"/>
+                                <rect key="frame" x="30" y="37" width="354" height="34"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="njs-tC-kR9">
-                                <rect key="frame" x="0.0" y="384" width="414" height="464"/>
+                                <rect key="frame" x="0.0" y="340" width="414" height="454"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -339,6 +334,9 @@
                             <constraint firstItem="njs-tC-kR9" firstAttribute="leading" secondItem="Kak-fs-WTL" secondAttribute="leading" id="tDd-w0-28d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kak-fs-WTL"/>
+                        <connections>
+                            <outlet property="titleViewSong" destination="My2-81-JIV" id="YGb-Dj-ecE"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="0wp-Ti-rHO"/>
                 </viewController>
