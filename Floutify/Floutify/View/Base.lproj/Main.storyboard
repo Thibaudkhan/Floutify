@@ -159,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="3140.579710144928" y="65.625"/>
         </scene>
-        <!--Album-->
+        <!--Album Cell-->
         <scene sceneID="T1G-cc-CUX">
             <objects>
-                <viewController id="xtb-Hl-YUD" customClass="Album" sceneMemberID="viewController">
+                <viewController id="xtb-Hl-YUD" customClass="AlbumCell" customModule="Floutify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mnf-GB-xwS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,6 +217,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vly-2A-GcE">
+                                <rect key="frame" x="186" y="123" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="peX-6M-GKe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -227,6 +234,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Qd-2a-gr4"/>
+                    <connections>
+                        <outlet property="albumLabel" destination="vly-2A-GcE" id="YRg-Ja-ftF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fca-jq-7nk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

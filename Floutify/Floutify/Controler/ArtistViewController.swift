@@ -7,6 +7,9 @@
 
 import UIKit
 
+var album: [String] = ["Cobble","Terre"]
+var myIndex = 0
+
 class ArtistViewController: UIViewController {
 
     var index = 0
@@ -32,8 +35,8 @@ class ArtistViewController: UIViewController {
             var allImages: [ImageCell] = []
             let txt = "CobblestoneNew.png"
                 
-            let imageA = ImageCell(image: UIImage(named: txt)! ,title:"Cobble")
-            let imageB = ImageCell(image: UIImage(named: "GrassNew.png")! ,title:"Terre")
+            let imageA = ImageCell(image: UIImage(named: txt)! ,title: album[0])
+            let imageB = ImageCell(image: UIImage(named: "GrassNew.png")! ,title: album[1])
             
             allImages.append(imageA)
             allImages.append(imageB)
