@@ -15,6 +15,11 @@
 		4E2C3E2E25A70BF4008C9892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2C3E2C25A70BF4008C9892 /* LaunchScreen.storyboard */; };
 		4E2C3E3925A70BF5008C9892 /* FloutifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C3E3825A70BF5008C9892 /* FloutifyTests.swift */; };
 		4E2C3E4425A70BF5008C9892 /* FloutifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C3E4325A70BF5008C9892 /* FloutifyUITests.swift */; };
+		4E5835A925A80DB800F02334 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5835A525A80DB800F02334 /* Album.swift */; };
+		4E5835AA25A80DB800F02334 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5835A625A80DB800F02334 /* JSON.swift */; };
+		4E5835AB25A80DB800F02334 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5835A725A80DB800F02334 /* Artist.swift */; };
+		4E5835AC25A80DB800F02334 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5835A825A80DB800F02334 /* Song.swift */; };
+		4E5835B425A80DC700F02334 /* TestJSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5835B325A80DC700F02334 /* TestJSONViewController.swift */; };
 		9A031B7425A7DDC200BE3F72 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A031B7325A7DDC200BE3F72 /* AlbumCell.swift */; };
 		9AAFD87525A7B73800ED73FA /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAFD87425A7B73800ED73FA /* ImageCell.swift */; };
 		9AB614B925A7470900F29B7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB614B825A7470900F29B7F /* LoginViewController.swift */; };
@@ -54,6 +59,11 @@
 		4E2C3E3F25A70BF5008C9892 /* FloutifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloutifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2C3E4325A70BF5008C9892 /* FloutifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloutifyUITests.swift; sourceTree = "<group>"; };
 		4E2C3E4525A70BF5008C9892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E5835A525A80DB800F02334 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Album.swift; path = Floutify/Controler/Album.swift; sourceTree = SOURCE_ROOT; };
+		4E5835A625A80DB800F02334 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = Floutify/Controler/JSON.swift; sourceTree = SOURCE_ROOT; };
+		4E5835A725A80DB800F02334 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artist.swift; path = Floutify/Controler/Artist.swift; sourceTree = SOURCE_ROOT; };
+		4E5835A825A80DB800F02334 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Song.swift; path = Floutify/Controler/Song.swift; sourceTree = SOURCE_ROOT; };
+		4E5835B325A80DC700F02334 /* TestJSONViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestJSONViewController.swift; sourceTree = "<group>"; };
 		9A031B7325A7DDC200BE3F72 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		9AAFD87425A7B73800ED73FA /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageCell.swift; path = Floutify/ImageCell.swift; sourceTree = SOURCE_ROOT; };
 		9AB614B825A7470900F29B7F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +151,10 @@
 		9AB614A425A73FF200F29B7F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4E5835A525A80DB800F02334 /* Album.swift */,
+				4E5835A725A80DB800F02334 /* Artist.swift */,
+				4E5835A625A80DB800F02334 /* JSON.swift */,
+				4E5835A825A80DB800F02334 /* Song.swift */,
 				9AAFD87425A7B73800ED73FA /* ImageCell.swift */,
 			);
 			path = Model;
@@ -158,6 +172,7 @@
 		9AB614A625A7401700F29B7F /* Controler */ = {
 			isa = PBXGroup;
 			children = (
+				4E5835B325A80DC700F02334 /* TestJSONViewController.swift */,
 				4E2C3E2525A70BF1008C9892 /* ViewController.swift */,
 				9AB614B825A7470900F29B7F /* LoginViewController.swift */,
 				9AB614D025A76AC700F29B7F /* ArtistViewController.swift */,
@@ -297,14 +312,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E5835AC25A80DB800F02334 /* Song.swift in Sources */,
+				4E5835B425A80DC700F02334 /* TestJSONViewController.swift in Sources */,
 				9AB614B925A7470900F29B7F /* LoginViewController.swift in Sources */,
+				4E5835AA25A80DB800F02334 /* JSON.swift in Sources */,
 				4E2C3E2625A70BF1008C9892 /* ViewController.swift in Sources */,
 				9AE5D75525A7B47B006FA9B8 /* ArtistCell.swift in Sources */,
 				9A031B7425A7DDC200BE3F72 /* AlbumCell.swift in Sources */,
 				4E2C3E2225A70BF1008C9892 /* AppDelegate.swift in Sources */,
+				4E5835A925A80DB800F02334 /* Album.swift in Sources */,
 				4E2C3E2425A70BF1008C9892 /* SceneDelegate.swift in Sources */,
 				9AAFD87525A7B73800ED73FA /* ImageCell.swift in Sources */,
 				9AB614D125A76AC700F29B7F /* ArtistViewController.swift in Sources */,
+				4E5835AB25A80DB800F02334 /* Artist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
