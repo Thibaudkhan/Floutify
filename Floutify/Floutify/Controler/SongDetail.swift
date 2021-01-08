@@ -10,10 +10,11 @@ import UIKit
 class SongDetail: UIView{
 
 
-    @IBOutlet weak var titleViewSong: UITextField!
+    
+    @IBOutlet weak var txtSong: UITextView!
     
     
     func setText(text: TextCell){
-        titleViewSong.text = text.title
+        txtSong.text = text.title
     }
 }

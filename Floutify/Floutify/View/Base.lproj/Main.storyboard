@@ -305,11 +305,11 @@
             </objects>
             <point key="canvasLocation" x="4552.1739130434789" y="65.625"/>
         </scene>
-        <!--View Controller-->
+        <!--Song Detail View Controller-->
         <scene sceneID="bkx-FQ-xXZ">
             <objects>
-                <viewController id="smK-fw-HWv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4Sn-42-p4A">
+                <viewController id="smK-fw-HWv" customClass="SongDetailViewController" customModule="Floutify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="SongDetail" id="4Sn-42-p4A" customClass="SongDetail" customModule="Floutify" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -337,8 +337,14 @@
                             <constraint firstItem="njs-tC-kR9" firstAttribute="trailing" secondItem="Kak-fs-WTL" secondAttribute="trailing" id="iNK-cr-qIt"/>
                             <constraint firstItem="njs-tC-kR9" firstAttribute="leading" secondItem="Kak-fs-WTL" secondAttribute="leading" id="tDd-w0-28d"/>
                         </constraints>
+                        <connections>
+                            <outlet property="txtSong" destination="njs-tC-kR9" id="tOB-NW-mAM"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="0wp-Ti-rHO"/>
+                    <connections>
+                        <outlet property="lblTrack" destination="Lcv-T6-tZ6" id="iku-cN-iy5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHp-e8-wmL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
