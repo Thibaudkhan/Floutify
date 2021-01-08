@@ -227,10 +227,10 @@
             </objects>
             <point key="canvasLocation" x="3840.579710144928" y="65.625"/>
         </scene>
-        <!--View Controller-->
+        <!--Song View Controller-->
         <scene sceneID="jJm-Hn-Aoi">
             <objects>
-                <viewController id="kyz-Yz-I40" sceneMemberID="viewController">
+                <viewController id="kyz-Yz-I40" customClass="SongViewController" customModule="Floutify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5J8-aF-vlR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,7 +246,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongTableCell" id="ZIs-3m-wzV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" id="ZIs-3m-wzV" customClass="SongCell" customModule="Floutify" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZIs-3m-wzV" id="lLK-dR-Z2W">
@@ -277,8 +277,15 @@
                                                 <constraint firstItem="daP-Qv-95m" firstAttribute="leading" secondItem="lLK-dR-Z2W" secondAttribute="leading" id="yQh-hI-U7j"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textViewSong" destination="daP-Qv-95m" id="SuP-FH-kcJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="kyz-Yz-I40" id="IYD-5d-4B6"/>
+                                    <outlet property="delegate" destination="kyz-Yz-I40" id="PT0-iq-ihh"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -290,6 +297,9 @@
                         <viewLayoutGuide key="safeArea" id="qMI-27-f9y"/>
                     </view>
                     <navigationItem key="navigationItem" id="geJ-RX-0oX"/>
+                    <connections>
+                        <outlet property="tableView" destination="QDA-ya-l8v" id="wQu-EK-1Ee"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efg-P1-Jag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

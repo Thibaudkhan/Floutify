@@ -23,6 +23,7 @@
 		BBE5FF8025A7F87D00291169 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5FF7F25A7F87D00291169 /* TextCell.swift */; };
 		BBE5FF8225A8085000291169 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5FF8125A8085000291169 /* AlbumCell.swift */; };
 		BBEC724B25A80EA300D11848 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEC724A25A80EA300D11848 /* SongViewController.swift */; };
+		BBEC724F25A80F6100D11848 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEC724E25A80F6100D11848 /* SongCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		BBE5FF7F25A7F87D00291169 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextCell.swift; path = Floutify/Controler/TextCell.swift; sourceTree = SOURCE_ROOT; };
 		BBE5FF8125A8085000291169 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		BBEC724A25A80EA300D11848 /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
+		BBEC724E25A80F6100D11848 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,8 +149,11 @@
 		9AB614A425A73FF200F29B7F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9AE5D75425A7B47B006FA9B8 /* ArtistCell.swift */,
+				BBE5FF8125A8085000291169 /* AlbumCell.swift */,
 				9AAFD87425A7B73800ED73FA /* ImageCell.swift */,
 				BBE5FF7F25A7F87D00291169 /* TextCell.swift */,
+				BBEC724E25A80F6100D11848 /* SongCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,8 +174,6 @@
 				9AB614B825A7470900F29B7F /* LoginViewController.swift */,
 				9AB614D025A76AC700F29B7F /* ArtistViewController.swift */,
 				BBE5FF7B25A7F7FC00291169 /* AlbumViewController.swift */,
-				9AE5D75425A7B47B006FA9B8 /* ArtistCell.swift */,
-				BBE5FF8125A8085000291169 /* AlbumCell.swift */,
 				BBEC724A25A80EA300D11848 /* SongViewController.swift */,
 			);
 			path = Controler;
@@ -310,6 +313,7 @@
 				9AB614B925A7470900F29B7F /* LoginViewController.swift in Sources */,
 				4E2C3E2625A70BF1008C9892 /* ViewController.swift in Sources */,
 				9AE5D75525A7B47B006FA9B8 /* ArtistCell.swift in Sources */,
+				BBEC724F25A80F6100D11848 /* SongCell.swift in Sources */,
 				BBE5FF7C25A7F7FC00291169 /* AlbumViewController.swift in Sources */,
 				4E2C3E2225A70BF1008C9892 /* AppDelegate.swift in Sources */,
 				4E2C3E2425A70BF1008C9892 /* SceneDelegate.swift in Sources */,
