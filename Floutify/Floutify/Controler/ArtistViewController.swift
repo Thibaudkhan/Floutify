@@ -9,14 +9,12 @@ import UIKit
 
 var album: [String] = ["Cobble","Terre"]
 var myIndexArtist = 0
+var myArtist:[Album] = []
 
 
 class ArtistViewController: UIViewController {
 
-    var index = 0
     
-    
-    @IBOutlet weak var tableView: UITableView!
     
         var texts: [TextCell] = []
         var artists: [Artist] = []
@@ -25,18 +23,24 @@ class ArtistViewController: UIViewController {
           set(value) { artists = value}
            
         }
-        
+    @IBOutlet weak var tableView: UITableView!
+    
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+            print("avant")
             getJSON()
-            tableView.delegate = self
-            tableView.dataSource = self
+            print("apres")
+            
+
         }
     
         
         func loadArray(artists: [Artist]) {
             texts = createArray(artists: artists)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            print("data",texts.count)
         }
     
     
@@ -45,18 +49,13 @@ class ArtistViewController: UIViewController {
             
             //print("OSEKUUUUUUUUUUR \(artists)")
             var allText: [TextCell] = []
-            
             for item in artists {
                 allText.append(TextCell(title: item.name))
                 print(item.name)
             }
-            print("coucou", allText)
+            print("coucou", allText.count)
             
-                
-           
-            
-            
-            
+            //tableView.reloadData()
             return allText
         }
 
@@ -87,8 +86,9 @@ class ArtistViewController: UIViewController {
                         
                         let json_decoded = try decoder.decode([Artist].self, from: data!)
                         //artistsList.append(contentsOf: json_decoded)
-                        artistsList = json_decoded
-                        loadArray(artists: json_decoded)
+                        self.artistsList = json_decoded
+                        print("apres")
+                        self.loadArray(artists: json_decoded)
 
                         //print(artistsList)
                     }
@@ -101,13 +101,15 @@ class ArtistViewController: UIViewController {
             // Make the API Call
             dataTask.resume()
         }
+    
+    
 }
 
 
     extension ArtistViewController: UITableViewDataSource, UITableViewDelegate{
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            print("blablqabla")
+            print("blablqabla",texts.count)
             return texts.count
         }
         
@@ -122,7 +124,8 @@ class ArtistViewController: UIViewController {
             return cell
         }
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            index = indexPath.row
+            myIndexArtist = indexPath.row
+            myArtist = artists[myIndexArtist].albums
             performSegue(withIdentifier: "segue", sender: self)
         }
         

@@ -13,11 +13,13 @@ class ArtistCell: UITableViewCell {
     
     
     
-    @IBOutlet weak var textView: UITextView!
+   
+    
+    @IBOutlet weak var labelCell: UILabel!
     
     
     func setText(text: TextCell){
-        textView.text = text.title
+        labelCell.text = text.title
     }
     
 }

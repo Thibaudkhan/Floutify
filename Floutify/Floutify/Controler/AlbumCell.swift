@@ -11,9 +11,10 @@ class AlbumCell: UITableViewCell {
 
 
    
-    @IBOutlet weak var textViewAlbum: UITextView!
+    
+    @IBOutlet weak var albumLabel: UILabel!
     
     func setText(text: TextCell){
-        textViewAlbum.text = text.title
+        albumLabel.text = text.title
     }
 }

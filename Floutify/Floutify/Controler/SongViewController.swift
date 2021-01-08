@@ -8,6 +8,7 @@
 import UIKit
 
 var myIndexSong = 0
+var mySong = ""
 
 class SongViewController: UIViewController {
 
@@ -33,12 +34,11 @@ class SongViewController: UIViewController {
     func createArray() -> [TextCell]{
         
         var allAlbums: [TextCell] = []
-        var nbIt = 0
-        for _ in arr[myIndexArtist][myIndexAlbum]{
-            allAlbums.append(TextCell(title:arr[myIndexArtist][myIndexAlbum][nbIt]))
-            print(myIndexArtist," : ",myIndexAlbum)
-            print("coucou",arr[myIndexArtist][myIndexAlbum][nbIt])
-            nbIt+=1
+                
+        
+        for item in myAlbum {
+            print("track", item.title)
+            allAlbums.append(TextCell(title: item.title))
         }
         
         return allAlbums
@@ -65,7 +65,8 @@ extension SongViewController: UITableViewDataSource, UITableViewDelegate{
  }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndexAlbum = indexPath.row
+        myIndexSong = indexPath.row
+        mySong = myAlbum[myIndexSong].title
         performSegue(withIdentifier: "segueSong", sender: self)
 
     }

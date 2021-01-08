@@ -12,9 +12,12 @@ class SongCell: UITableViewCell {
 
     
     
-    @IBOutlet weak var textViewSong: UITextView!
+   
     
+   
+    
+    @IBOutlet weak var labelSong: UILabel!
     func setText(text: TextCell){
-        textViewSong.text = text.title
+        labelSong.text = text.title
     }
 }
