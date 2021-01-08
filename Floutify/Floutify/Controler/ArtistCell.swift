@@ -15,10 +15,9 @@ class ArtistCell: UITableViewCell {
     
     @IBOutlet weak var textView: UITextView!
     
-    @IBOutlet weak var imageViewArtist: UIImageView!
     
-    func setImage(image: ImageCell){
-        imageViewArtist.image = image.image
-        textView.text = image.title
+    func setText(text: TextCell){
+        textView.text = text.title
     }
+    
 }

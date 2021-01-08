@@ -18,7 +18,7 @@ class ArtistViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-        var images: [ImageCell] = []
+        var texts: [TextCell] = []
         var artists: [Artist] = []
         var artistsList: [Artist] {
           get { return artists }
@@ -36,24 +36,28 @@ class ArtistViewController: UIViewController {
     
         
         func loadArray(artists: [Artist]) {
-            images = createArray(artists: artists)
+            texts = createArray(artists: artists)
         }
     
     
-        func createArray(artists: [Artist]) -> [ImageCell]{
+        func createArray(artists: [Artist]) -> [TextCell]{
             
             
-            print("OSEKUUUUUUUUUUR \(artists)")
-            var allImages: [ImageCell] = []
-            let txt = "CobblestoneNew.png"
+            //print("OSEKUUUUUUUUUUR \(artists)")
+            var allText: [TextCell] = []
+            
+            for item in artists {
+                allText.append(TextCell(title: item.name))
+                print(item.name)
+            }
+            print("coucou", allText)
+            
                 
-            let imageA = ImageCell(image: UIImage(named: txt)! ,title: album[0])
-            let imageB = ImageCell(image: UIImage(named: "GrassNew.png")! ,title: album[1])
+           
             
-            allImages.append(imageA)
-            allImages.append(imageB)
             
-            return allImages
+            
+            return allText
         }
 
         // Integration of the JSON datas //
@@ -86,7 +90,7 @@ class ArtistViewController: UIViewController {
                         artistsList = json_decoded
                         loadArray(artists: json_decoded)
 
-                        print(artistsList)
+                        //print(artistsList)
                     }
                     catch {
                         print("Error JSON Parsing : \(error)")
@@ -101,18 +105,20 @@ class ArtistViewController: UIViewController {
 
 
     extension ArtistViewController: UITableViewDataSource, UITableViewDelegate{
-       
+        
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return images.count
+            print("blablqabla")
+            return texts.count
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let image = images[indexPath.row]
-            print(image.title)
+            print("dadadadadadad")
+            let text = texts[indexPath.row]
+            print(text.title)
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "ArtistCell") as! ArtistCell
-            cell.setImage(image: image)
-            print(image.title)
+            cell.setText(text: text)
+            print("yo", text.title)
             return cell
         }
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
