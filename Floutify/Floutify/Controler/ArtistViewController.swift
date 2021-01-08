@@ -27,9 +27,9 @@ class ArtistViewController: UIViewController {
     
         override func viewDidLoad() {
             super.viewDidLoad()
-            print("avant")
+            
             getJSON()
-            print("apres")
+           
             
 
         }
@@ -40,7 +40,6 @@ class ArtistViewController: UIViewController {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-            print("data",texts.count)
         }
     
     
@@ -53,7 +52,7 @@ class ArtistViewController: UIViewController {
                 allText.append(TextCell(title: item.name))
                 print(item.name)
             }
-            print("coucou", allText.count)
+           
             
             //tableView.reloadData()
             return allText
@@ -62,7 +61,7 @@ class ArtistViewController: UIViewController {
         // Integration of the JSON datas //
         func getJSON() {
             
-            print("GetJSON !!!!!!!")
+           
             //URL of the JSON
             let urlString = "https://gist.githubusercontent.com/jasonbaldridge/2668632/raw/e56320c485a33c339791a25cc107bf70e7f1d763/music.json"
 
@@ -87,7 +86,7 @@ class ArtistViewController: UIViewController {
                         let json_decoded = try decoder.decode([Artist].self, from: data!)
                         //artistsList.append(contentsOf: json_decoded)
                         self.artistsList = json_decoded
-                        print("apres")
+                        
                         self.loadArray(artists: json_decoded)
 
                         //print(artistsList)
@@ -109,18 +108,16 @@ class ArtistViewController: UIViewController {
     extension ArtistViewController: UITableViewDataSource, UITableViewDelegate{
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            print("blablqabla",texts.count)
+            
             return texts.count
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            print("dadadadadadad")
             let text = texts[indexPath.row]
             print(text.title)
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "ArtistCell") as! ArtistCell
             cell.setText(text: text)
-            print("yo", text.title)
             return cell
         }
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

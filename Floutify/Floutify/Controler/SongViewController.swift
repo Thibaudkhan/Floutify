@@ -52,7 +52,6 @@ class SongViewController: UIViewController {
 extension SongViewController: UITableViewDataSource, UITableViewDelegate{
 
  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    print("tototata", songs.count)
      return songs.count
  }
  
@@ -61,7 +60,6 @@ extension SongViewController: UITableViewDataSource, UITableViewDelegate{
 
      
      let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell") as! SongCell
-    print("cacacacacacaccacaca", text.title)
      cell.setText(text: text)
      return cell
  }
