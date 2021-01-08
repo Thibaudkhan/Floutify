@@ -9,6 +9,8 @@ import UIKit
 
 class ArtistViewController: UIViewController {
 
+    var index = 0
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -39,7 +41,8 @@ class ArtistViewController: UIViewController {
             return allImages
         }
 
-    }
+   
+}
 
 
     extension ArtistViewController: UITableViewDataSource, UITableViewDelegate{
@@ -56,6 +59,10 @@ class ArtistViewController: UIViewController {
             cell.setImage(image: image)
             print(image.title)
             return cell
+        }
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            index = indexPath.row
+            performSegue(withIdentifier: "segue", sender: self)
         }
         
         
