@@ -16,8 +16,9 @@ class SongCell: UITableViewCell {
     
    
     
-    @IBOutlet weak var labelSong: UILabel!
+    @IBOutlet weak var labelTrack: UILabel!
+    
     func setText(text: TextCell){
-        labelSong.text = text.title
+        labelTrack.text = text.title
     }
 }

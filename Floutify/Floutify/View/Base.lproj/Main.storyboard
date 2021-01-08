@@ -243,31 +243,32 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SongCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" id="ZIs-3m-wzV" customClass="SongCell" customModule="Floutify" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="62.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="21.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZIs-3m-wzV" id="lLK-dR-Z2W">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="62.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="21.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3W-1Z-tNf">
-                                                    <rect key="frame" x="20" y="11" width="374" height="40.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="SbH-32-zR3"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZv-sD-eUw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="X3W-1Z-tNf" firstAttribute="top" secondItem="lLK-dR-Z2W" secondAttribute="topMargin" id="1RT-6T-GJ1"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="X3W-1Z-tNf" secondAttribute="bottom" id="DEn-p1-r5g"/>
-                                                <constraint firstItem="X3W-1Z-tNf" firstAttribute="leading" secondItem="lLK-dR-Z2W" secondAttribute="leadingMargin" id="JrP-6T-tNI"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="X3W-1Z-tNf" secondAttribute="trailing" id="tOw-s8-XNi"/>
+                                                <constraint firstAttribute="bottom" secondItem="sZv-sD-eUw" secondAttribute="bottom" id="2hb-Y8-G76"/>
+                                                <constraint firstItem="sZv-sD-eUw" firstAttribute="top" secondItem="lLK-dR-Z2W" secondAttribute="top" id="4br-7F-BUc"/>
+                                                <constraint firstAttribute="trailing" secondItem="sZv-sD-eUw" secondAttribute="trailing" id="A4a-5t-xr0"/>
+                                                <constraint firstItem="sZv-sD-eUw" firstAttribute="leading" secondItem="lLK-dR-Z2W" secondAttribute="leading" id="EN5-0F-akm"/>
+                                                <constraint firstItem="sZv-sD-eUw" firstAttribute="top" secondItem="lLK-dR-Z2W" secondAttribute="top" id="QP3-Rd-czD"/>
+                                                <constraint firstAttribute="trailing" secondItem="sZv-sD-eUw" secondAttribute="trailing" id="S9Q-Hw-xmb"/>
+                                                <constraint firstAttribute="bottom" secondItem="sZv-sD-eUw" secondAttribute="bottom" id="ZCT-vy-29r"/>
+                                                <constraint firstItem="sZv-sD-eUw" firstAttribute="leading" secondItem="lLK-dR-Z2W" secondAttribute="leading" id="cM1-9o-T6d"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="labelSong" destination="X3W-1Z-tNf" id="14d-lz-e6e"/>
+                                            <outlet property="labelTrack" destination="sZv-sD-eUw" id="u8C-jJ-pMv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -296,7 +297,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="geJ-RX-0oX"/>
                     <connections>
-                        <outlet property="tableView" destination="QDA-ya-l8v" id="kIE-Ci-Kw2"/>
+                        <outlet property="tableView" destination="QDA-ya-l8v" id="XwB-hh-MWv"/>
                         <segue destination="smK-fw-HWv" kind="presentation" identifier="segueSong" modalPresentationStyle="fullScreen" id="Z5s-ZX-T2B"/>
                     </connections>
                 </viewController>

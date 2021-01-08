@@ -13,19 +13,20 @@ var mySong = ""
 class SongViewController: UIViewController {
 
 
+    @IBOutlet weak var tableView: UITableView!
     var arr = [[["Showbiz","Sunburn"],["Drones"]],[["lal","laal"],["lool","lol"],["lil"]]]
     
-    var albums: [TextCell] = []
+    var songs: [TextCell] = []
     
     
-    @IBOutlet weak var tableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        albums = createArray()
-        //tableView.delegate = self
-        //tableView.dataSource = self
+        songs = createArray()
+        tableView.delegate = self
+        tableView.dataSource = self
         
 
         // Do any additional setup after loading the view.
@@ -33,15 +34,15 @@ class SongViewController: UIViewController {
     
     func createArray() -> [TextCell]{
         
-        var allAlbums: [TextCell] = []
+        var allSongs: [TextCell] = []
                 
         
         for item in myAlbum {
             print("track", item.title)
-            allAlbums.append(TextCell(title: item.title))
+            allSongs.append(TextCell(title: item.title))
         }
         
-        return allAlbums
+        return allSongs
     }
     
     
@@ -51,15 +52,16 @@ class SongViewController: UIViewController {
 extension SongViewController: UITableViewDataSource, UITableViewDelegate{
 
  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     return albums.count
+    print("tototata", songs.count)
+     return songs.count
  }
  
  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let text = albums[indexPath.row]
+     let text = songs[indexPath.row]
 
      
      let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell") as! SongCell
-    print(text.title)
+    print("cacacacacacaccacaca", text.title)
      cell.setText(text: text)
      return cell
  }
