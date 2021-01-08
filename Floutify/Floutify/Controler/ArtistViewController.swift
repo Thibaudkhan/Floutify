@@ -8,7 +8,7 @@
 import UIKit
 
 var album: [String] = ["Cobble","Terre"]
-var myIndex = 0
+var myIndexArtist = 0
 
 
 class ArtistViewController: UIViewController {

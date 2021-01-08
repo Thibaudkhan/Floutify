@@ -162,10 +162,10 @@
             </objects>
             <point key="canvasLocation" x="3140.579710144928" y="65.625"/>
         </scene>
-        <!--Album Cell-->
+        <!--Album View Controller-->
         <scene sceneID="T1G-cc-CUX">
             <objects>
-                <viewController id="xtb-Hl-YUD" customClass="AlbumCell" customModule="Floutify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xtb-Hl-YUD" customClass="AlbumViewController" customModule="Floutify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mnf-GB-xwS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,7 +175,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumTableCell" id="k66-yl-iRU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AlbumCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumCell" id="k66-yl-iRU" customClass="AlbumCell" customModule="Floutify" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k66-yl-iRU" id="Fu3-FT-KF7">
@@ -193,24 +193,17 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="en8-8f-EFy">
-                                                    <rect key="frame" x="7" y="-43" width="240" height="128"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="240" id="zFK-2b-ud3"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="en8-8f-EFy" secondAttribute="bottom" constant="-41.5" id="92D-In-u0E"/>
-                                                <constraint firstItem="en8-8f-EFy" firstAttribute="top" secondItem="Fu3-FT-KF7" secondAttribute="top" constant="-43" id="Bme-SP-mbw"/>
-                                                <constraint firstItem="en8-8f-EFy" firstAttribute="leading" secondItem="Fu3-FT-KF7" secondAttribute="leading" constant="7" id="KBR-CV-jfW"/>
-                                                <constraint firstItem="en8-8f-EFy" firstAttribute="leading" secondItem="Fu3-FT-KF7" secondAttribute="leading" constant="7" id="MST-FJ-Vn4"/>
                                                 <constraint firstItem="dea-Le-wrD" firstAttribute="top" secondItem="Fu3-FT-KF7" secondAttribute="top" constant="-43" id="Od6-7H-RJj"/>
                                                 <constraint firstAttribute="trailing" secondItem="dea-Le-wrD" secondAttribute="trailing" constant="-46" id="j3i-HK-Qp1"/>
                                                 <constraint firstAttribute="trailing" secondItem="dea-Le-wrD" secondAttribute="trailing" constant="-46" id="okw-9D-BpU"/>
                                                 <constraint firstAttribute="bottom" secondItem="dea-Le-wrD" secondAttribute="bottom" constant="-41.5" id="p4i-IE-hcC"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textViewAlbum" destination="dea-Le-wrD" id="gLH-Du-NBP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -238,16 +231,18 @@
                     <navigationItem key="navigationItem" id="4Qd-2a-gr4"/>
                     <connections>
                         <outlet property="albumLabel" destination="vly-2A-GcE" id="YRg-Ja-ftF"/>
+                        <outlet property="tableView" destination="qkv-Qk-j7E" id="88F-i2-WCl"/>
+                        <segue destination="kyz-Yz-I40" kind="presentation" identifier="segueAlbum" modalPresentationStyle="fullScreen" id="bGb-DZ-yNY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fca-jq-7nk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3841" y="66"/>
         </scene>
-        <!--View Controller-->
+        <!--Song View Controller-->
         <scene sceneID="jJm-Hn-Aoi">
             <objects>
-                <viewController id="kyz-Yz-I40" sceneMemberID="viewController">
+                <viewController id="kyz-Yz-I40" customClass="SongViewController" customModule="Floutify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5J8-aF-vlR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,7 +252,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongTableCell" id="ZIs-3m-wzV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SongCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" id="ZIs-3m-wzV" customClass="SongCell" customModule="Floutify" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZIs-3m-wzV" id="lLK-dR-Z2W">
@@ -288,6 +283,9 @@
                                                 <constraint firstItem="daP-Qv-95m" firstAttribute="leading" secondItem="lLK-dR-Z2W" secondAttribute="leading" id="yQh-hI-U7j"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textViewSong" destination="daP-Qv-95m" id="Vw2-ZC-xy1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -306,6 +304,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="geJ-RX-0oX"/>
+                    <connections>
+                        <outlet property="tableView" destination="QDA-ya-l8v" id="kIE-Ci-Kw2"/>
+                        <segue destination="smK-fw-HWv" kind="presentation" identifier="segueSong" modalPresentationStyle="fullScreen" id="Z5s-ZX-T2B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efg-P1-Jag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

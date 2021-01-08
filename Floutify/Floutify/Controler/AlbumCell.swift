@@ -5,18 +5,15 @@
 //  Created by user185203 on 1/8/21.
 //
 
-import Foundation
 import UIKit
 
-class AlbumCell: UIViewController {
+class AlbumCell: UITableViewCell {
 
+
+   
+    @IBOutlet weak var textViewAlbum: UITextView!
     
-    @IBOutlet weak var albumLabel: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        albumLabel.text = album[myIndex]
+    func setText(text: TextCell){
+        textViewAlbum.text = text.title
     }
-    
 }
