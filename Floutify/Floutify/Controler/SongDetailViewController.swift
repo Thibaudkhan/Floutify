@@ -17,6 +17,7 @@ class SongDetailViewController: UIViewController {
         setText()
         // Do any additional setup after loading the view.
     }
+    @IBOutlet weak var img: UIImageView!
     
         
     @IBOutlet weak var lblTrack: UILabel!

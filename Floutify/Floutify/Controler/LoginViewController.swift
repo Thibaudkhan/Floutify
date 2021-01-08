@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnConnect(_ sender: Any) {
-        if(txtLogin.text == "" && txtPwd.text == "")
+        if(txtLogin.text == "admin" && txtPwd.text == "admin")
         {
             print("connected")
             
